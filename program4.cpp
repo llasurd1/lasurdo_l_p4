@@ -59,8 +59,7 @@ int main(int argc, char *argv[]) {
 	cout << "h" << endl;
 	for(int u = 0; u<set; u++) {
 		
-		chrono::steady_clock sc;
-	  	auto start = sc.now();
+		auto start = chrono::high_resolution_clock::now();
 		/*for(int i = 0; i<items[u]; i++) {
 			cout << "Weight " << weights[u][i] << " Profits " << profits[u][i] <<  endl;
 		}*/
@@ -86,8 +85,8 @@ int main(int argc, char *argv[]) {
 			}
 			
 		}
-		auto end = sc.now();
-	 	auto time_span = static_cast<chrono::duration<double>>(end-start);
+		auto finish = chrono::high_resolution_clock::now();
+		chrono::duration<double> elapsed = finish - start;
 		/*
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
@@ -103,7 +102,7 @@ int main(int argc, char *argv[]) {
 				cout << darray[i][j] << endl;
 			}
 		}*/
-		cout << items[u] << " " << mp << " " << time_span.count()/1000 <<endl;
+		cout << items[u] << " " << mp << " " << elapsed.count()*1000 <<endl;
 	}
 	
 output.close();
