@@ -58,9 +58,9 @@ int main(int argc, char *argv[]) {
 	for(int u = 0; u<set; u++) {
 		chrono::steady_clock sc;
 	  	auto start = sc.now();
-		for(int i = 0; i<items[u]; i++) {
+		/*for(int i = 0; i<items[u]; i++) {
 			cout << "Weight " << weights[u][i] << " Profits " << profits[u][i] <<  endl;
-		}
+		}*/
 		//dynamic programming
 		int cap = knapcaps[u]+1;
 		int n = items[u]+1;
@@ -90,15 +90,16 @@ int main(int argc, char *argv[]) {
 				else {
 					darray[i][j] = darray[i-1][j];	
 				}
+				cout << darray[i][j] << endl;
 			}
 		}
-		
+		/*
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
 			}
 			cout << endl;
-		}
+		}*/
 			
 	}
 	
