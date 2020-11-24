@@ -27,7 +27,9 @@ int main(int argc, char *argv[]) {
 	fstream file(argv[1], fstream::in);
 	ofstream output;
 	output.open(argv[2]);
-	
+	int max(int a, int b) {  
+   	return (a > b) ? a : b;  
+	} 
 	if(file.is_open()){  
 		while(!file.eof() && !file.fail()) {
 			int item = 0;
@@ -79,18 +81,14 @@ int main(int argc, char *argv[]) {
 					darray[i][j] = 0;	
 				}
 				else if(weights[u][i-1] <= j) {
-					if((profits[u][i-1] + darray[i-1][j-weights[u][i-1]]) > darray[i-1][j]) {
-						darray[i][j] = 	profits[u][i-1] + darray[i-1][j-weights[u][i-1]];
-					}
-					else {
-						darray[i][j] = 	darray[i-1][j];	
-					}
+					darray[i][j] = max(profits[u][i-1] + darray[i-1][j-weights[u][i-1]], darray[i-1][j]);
 				}
 				else {
 					darray[i][j] = darray[i-1][j];	
 				}
 			}
 		}
+		
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
