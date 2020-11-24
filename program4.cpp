@@ -87,21 +87,6 @@ int main(int argc, char *argv[]) {
 		}
 		auto finish = chrono::high_resolution_clock::now();
 		chrono::duration<double> elapsed = finish - start;
-		/*
-		for(int i = 0; i<n; i++) {
-			for(int j = 0; j<cap; j++) {
-				if(i==0 || j ==0) {
-					darray[i][j] = 0;	
-				}
-				else if(weights[u][i-1] <= j) {
-					darray[i][j] = max(profits[u][i-1] + darray[i-1][j-weights[u][i-1]], darray[i-1][j]);
-				}
-				else {
-					darray[i][j] = darray[i-1][j];	
-				}
-				cout << darray[i][j] << endl;
-			}
-		}*/
 		cout << items[u] << " " << mp << " " << elapsed.count()*1000 <<endl;
 	}
 	
