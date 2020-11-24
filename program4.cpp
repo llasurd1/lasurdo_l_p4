@@ -17,22 +17,6 @@ int items[5];
 int knapcaps[5];
 vector<int> knapsack;
 
-int max(double a, double b) { 
-	return (a > b) ? a : b; 
-} 
-
-int napsack(int weight, int n, int u) {
-	if(n==0||weight==0) {
-		return 0;	
-	}
-	if(weights[u][n] > weight) {
-		return napsack(weight, n-1, u);	
-	}
-	else {
-		return max(profits[u][n] + napsack(weight - weights[u][n], n - 1, u), napsack(weight, n - 1, u)); 
-	}
-}
-
 int main(int argc, char *argv[]) {
 	
 	
@@ -71,7 +55,24 @@ int main(int argc, char *argv[]) {
 	for(int u = 0; u<set; u++) {
 		chrono::steady_clock sc;
 	  	auto start = sc.now();
-		//greedy algorithm 1
+		//dynamic programming
+		int cap = knapcaps[u]+1;
+		int n = items[u]+1
+		double darray[cap][n];
+		for(int c = 0; c<cap; c++) {
+			darray[0][c] = 0;	
+		}
+		for(int i = 0; i<n; i++) {
+			darray[i][0] = 0;	
+			for(int c = 1; c<cap; j++) {
+				if(weights[u][i] <= c && (darray[i-1][c-weights[u][i]] + profits[u][i] > darray[i-1][c])) {
+					darray[i][c] = darray[i-1][c-weights[u][i] + profits[u][i];
+				}
+				else {
+					darray[i][c] = darray[i-1][c];	
+				}
+			}
+		}						   
 			
 	}
 	
