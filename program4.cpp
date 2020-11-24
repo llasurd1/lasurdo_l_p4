@@ -78,8 +78,9 @@ int main(int argc, char *argv[]) {
 				else {
 					darray[i][c] = darray[i-1][c];	
 				}
+				mp = darray[i][c];
 			}
-			mp = darray[i][c];
+			
 		}/*
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
