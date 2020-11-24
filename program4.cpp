@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
 			}
-			coutt << endl;
+			cout << endl;
 		}
 			
 	}
