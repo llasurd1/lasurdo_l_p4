@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
 		//dynamic programming
 		int cap = knapcaps[u]+1;
 		int n = items[u]+1;
-		int darray[cap][n];
+		int darray[n][cap];
 		for(int c = 0; c<cap; c++) {
 			darray[0][c] = 0;	
 		}
@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
 				cout << darray[i][j] << endl;
 			}
 		}*/
-		
+		cout << darray[
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
