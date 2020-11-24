@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	fstream file(argv[1], fstream::in);
 	ofstream output;
 	output.open(argv[2]);
-	cout << "h" << endl;
+	
 	if(file.is_open()){  
 		while(!file.eof() && !file.fail()) {
 			int item = 0;
@@ -53,8 +53,10 @@ int main(int argc, char *argv[]) {
 			}
 	      		set++;
 		}
+	
 	file.close();
 	}
+	cout << "h" << endl;
 	for(int u = 0; u<set; u++) {
 		chrono::steady_clock sc;
 	  	auto start = sc.now();
