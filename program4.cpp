@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	fstream file(argv[1], fstream::in);
 	ofstream output;
 	output.open(argv[2]);
-	
+	cout << "h" << endl;
 	if(file.is_open()){  
 		while(!file.eof() && !file.fail()) {
 			int item = 0;
