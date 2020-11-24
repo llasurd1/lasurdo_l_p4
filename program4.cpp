@@ -10,8 +10,8 @@
 
 using namespace std;
 int set = 0;
-double weights[5][1001];
-double profits[5][1001];
+int weights[5][1001];
+int profits[5][1001];
 double ratios[5][1001];
 int items[5];
 int knapcaps[5];
@@ -56,8 +56,8 @@ int main(int argc, char *argv[]) {
 		chrono::steady_clock sc;
 	  	auto start = sc.now();
 		//dynamic programming
-		double cap = knapcaps[u]+1;
-		double n = items[u]+1;
+		int cap = knapcaps[u]+1;
+		int n = items[u]+1;
 		double darray[cap][n];
 		for(int c = 0; c<cap; c++) {
 			darray[0][c] = 0;	
