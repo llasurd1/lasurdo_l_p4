@@ -81,7 +81,8 @@ int main(int argc, char *argv[]) {
 				mp = darray[i][c];
 			}
 			
-		}/*
+		}
+		/*
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				if(i==0 || j ==0) {
@@ -97,12 +98,6 @@ int main(int argc, char *argv[]) {
 			}
 		}*/
 		cout << items[u] << " " << mp << " " <<endl;
-		for(int i = 0; i<n; i++) {
-			for(int j = 0; j<cap; j++) {
-				darray[i][j] = 0;	
-			}
-		}
-			
 	}
 	
 output.close();
