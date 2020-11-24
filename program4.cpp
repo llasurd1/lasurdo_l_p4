@@ -61,11 +61,11 @@ int main(int argc, char *argv[]) {
 		//dynamic programming
 		int cap = knapcaps[u]+1;
 		int n = items[u]+1;
-		double darray[cap][n];
-		for(int c = 0; c<cap; c++) {
+		int darray[cap][n];
+		/*for(int c = 0; c<cap; c++) {
 			darray[0][c] = 0;	
 		}
-		/*for(int i = 1; i<n; i++) {
+		for(int i = 1; i<n; i++) {
 			darray[i][0] = 0;	
 			for(int c = 1; c<cap; c++) {
 				if(weights[u][i] <= c && (darray[i-1][c-weights[u][i]] + profits[u][i] > darray[i-1][c])) {
