@@ -101,7 +101,6 @@ int main(int argc, char *argv[]) {
 			for(int j = 0; j<cap; j++) {
 				darray[i][j] = 0;	
 			}
-			cout << endl;
 		}
 			
 	}
