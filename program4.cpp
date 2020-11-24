@@ -17,6 +17,9 @@ int items[5];
 int knapcaps[5];
 vector<int> knapsack;
 
+int max(int a, int b) {  
+   	return (a > b) ? a : b;  
+} 
 int main(int argc, char *argv[]) {
 	
 	
@@ -27,9 +30,7 @@ int main(int argc, char *argv[]) {
 	fstream file(argv[1], fstream::in);
 	ofstream output;
 	output.open(argv[2]);
-	int max(int a, int b) {  
-   	return (a > b) ? a : b;  
-	} 
+	
 	if(file.is_open()){  
 		while(!file.eof() && !file.fail()) {
 			int item = 0;
