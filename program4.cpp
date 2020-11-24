@@ -86,6 +86,8 @@ int main(int argc, char *argv[]) {
 			}
 			
 		}
+		auto end = sc.now();
+	 	auto time_span = static_cast<chrono::duration<double>>(end-start);
 		/*
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
@@ -101,7 +103,7 @@ int main(int argc, char *argv[]) {
 				cout << darray[i][j] << endl;
 			}
 		}*/
-		cout << items[u] << " " << mp << " " <<endl;
+		cout << items[u] << " " << mp << " " << time_span.count() <<endl;
 	}
 	
 output.close();
