@@ -56,13 +56,14 @@ int main(int argc, char *argv[]) {
 	
 	file.close();
 	}
-	cout << "h" << endl;
+	
 	for(int u = 0; u<set; u++) {
 		chrono::steady_clock sc;
 	  	auto start = sc.now();
 		for(int i = 0; i<items[u]; i++) {
 			cout << "Weight " << weights[u][i] << " Profits " << profits[u][i] <<  endl;
 		}
+		cout << "h" << endl;
 		//dynamic programming
 		int cap = knapcaps[u]+1;
 		int n = items[u]+1;
