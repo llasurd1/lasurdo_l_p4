@@ -42,9 +42,9 @@ int main(int argc, char *argv[]) {
 				file >> p;
 				r = p/w;
 				weights[set][i] = w;
-				cout << " weight "<< weights[set][i] << endl;
+				//cout << " weight "<< weights[set][i] << endl;
 				profits[set][i] = p;
-				cout << " profit" << profits[set][i] << endl;
+				//cout << " profit" << profits[set][i] << endl;
 				ratios[set][i] = r;
 				//cout << "ratios " << ratios[set][i] << endl;
 			}
@@ -91,12 +91,12 @@ int main(int argc, char *argv[]) {
 				}
 			}
 		}*/
-		/*for(int i = 0; i<n; i++) {
+		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
 			}
 			cout << endl;
-		}*/
+		}
 			
 	}
 	
