@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 	  	auto start = sc.now();
 		//dynamic programming
 		int cap = knapcaps[u]+1;
-		int n = items[u]+1
+		int n = items[u]+1;
 		double darray[cap][n];
 		for(int c = 0; c<cap; c++) {
 			darray[0][c] = 0;	
