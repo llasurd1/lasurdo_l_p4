@@ -103,7 +103,7 @@ int main(int argc, char *argv[]) {
 				cout << darray[i][j] << endl;
 			}
 		}*/
-		cout << items[u] << " " << mp << " " << time_span.count() <<endl;
+		cout << items[u] << " " << mp << " " << time_span.count()/1000 <<endl;
 	}
 	
 output.close();
