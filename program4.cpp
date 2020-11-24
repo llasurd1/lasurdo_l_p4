@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 			file >> knapcap;
 			items[set] = item;
 			knapcaps[set] = knapcap;
-			for(int i = 1; i<=item; i++) {
+			for(int i = 0; i<item; i++) {
 				double w, p, r;
 				file >> w;
 				file >> p;
