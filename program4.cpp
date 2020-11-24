@@ -65,6 +65,7 @@ int main(int argc, char *argv[]) {
 		int cap = knapcaps[u]+1;
 		int n = items[u]+1;
 		int darray[n][cap];
+		int mp = 0;
 		for(int c = 0; c<cap; c++) {
 			darray[0][c] = 0;	
 		}
@@ -78,6 +79,7 @@ int main(int argc, char *argv[]) {
 					darray[i][c] = darray[i-1][c];	
 				}
 			}
+			mp = darray[i][c];
 		}/*
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
@@ -93,13 +95,13 @@ int main(int argc, char *argv[]) {
 				cout << darray[i][j] << endl;
 			}
 		}*/
-		cout << items[u] << " " << 
-		for(int i = 0; i<n; i++) {
+		cout << items[u] << " " << mp << " " <<endl;
+		/*for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
 			}
 			cout << endl;
-		}
+		}*/
 			
 	}
 	
