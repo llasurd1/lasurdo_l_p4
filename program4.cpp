@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
 				cout << darray[i][j] << endl;
 			}
 		}*/
-		
+		cout << items[u] << " " << 
 		for(int i = 0; i<n; i++) {
 			for(int j = 0; j<cap; j++) {
 				cout << darray[i][j] << " ";	
