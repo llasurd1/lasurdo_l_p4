@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 		int cap = knapcaps[u]+1;
 		int n = items[u]+1;
 		double darray[cap][n];
-		for(int c = 0; c<cap; c++) {
+		/*for(int c = 0; c<cap; c++) {
 			darray[0][c] = 0;	
 		}
 		for(int i = 1; i<n; i++) {
@@ -70,6 +70,24 @@ int main(int argc, char *argv[]) {
 				}
 				else {
 					darray[i][c] = darray[i-1][c];	
+				}
+			}
+		}*/
+		for(int i = 0; i<n; i++) {
+			for(int j = 0; j<cap; j++) {
+				if(i==0 || j ==0) {
+					darray[i][j] = 0;	
+				}
+				else if(weights[u][i-1] <= j) {
+					if((profits[u][i-1] + darray[i-1][j-weights[u][i-1]) > darray[i-1][j]) {
+						darray[i][j] = 	profits[u][i-1] + darray[i-1][j-weights[u][i-1];
+					}
+					else {
+						darray[i][j] = 	darray[i-1][j];	
+					}
+				}
+				else {
+					darray[i][j] = darray[i-1][j];	
 				}
 			}
 		}
