@@ -79,8 +79,8 @@ int main(int argc, char *argv[]) {
 					darray[i][j] = 0;	
 				}
 				else if(weights[u][i-1] <= j) {
-					if((profits[u][i-1] + darray[i-1][j-weights[u][i-1]) > darray[i-1][j]) {
-						darray[i][j] = 	profits[u][i-1] + darray[i-1][j-weights[u][i-1];
+					if((profits[u][i-1] + darray[i-1][j-weights[u][i-1]]) > darray[i-1][j]) {
+						darray[i][j] = 	profits[u][i-1] + darray[i-1][j-weights[u][i-1]];
 					}
 					else {
 						darray[i][j] = 	darray[i-1][j];	
