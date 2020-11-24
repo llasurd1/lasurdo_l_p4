@@ -56,9 +56,9 @@ int main(int argc, char *argv[]) {
 	
 	file.close();
 	}
-	
+	cout << "h" << endl;
 	for(int u = 0; u<set; u++) {
-		cout << "h" << endl;
+		
 		chrono::steady_clock sc;
 	  	auto start = sc.now();
 		for(int i = 0; i<items[u]; i++) {
