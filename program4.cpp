@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
 			darray[i][0] = 0;	
 			for(int c = 1; c<cap; c++) {
 				if(weights[u][i] <= c && (darray[i-1][c-weights[u][i]] + profits[u][i] > darray[i-1][c])) {
-					darray[i][c] = darray[i-1][c-weights[u][i] + profits[u][i];
+					darray[i][c] = darray[i-1][c-weights[u][i]] + profits[u][i];
 				}
 				else {
 					darray[i][c] = darray[i-1][c];	
